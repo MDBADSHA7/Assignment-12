@@ -1,0 +1,56 @@
+[
+    {
+        "_id": 1,
+        "name": "Continantal refrigaritor parts",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDIDZ6Q1Mh_xMa0PK0cX7nvcNo_vxXuuEyiQ&usqp=CAU",
+        "description": "It is continantal parts of refrigarator.",
+        "minimum order quantity": 30,
+        "available order quantity": 120,
+        "per unit price": 1200
+    },
+    {
+        "_id": 2,
+        "name": "Fridge overload",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD1bi0n6ghDzabjxYfJI0UecYxooF2Klz-yA&usqp=CAU",
+        "description": "It is fridge overload parts of refrigarator , it save refrigerator form overloading.",
+        "minimum order quantity": 20,
+        "available order quantity": 250,
+        "per unit price": 120
+    },
+    {
+        "_id": 3,
+        "name": "Air condition",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC9fs03UGUJHWyG_ZGPy_YfOs6cfXzgZy1Bg&usqp=CAU",
+        "description": "It is air condition parts of refrigarator.It keep cool refregerator.",
+        "minimum order quantity": 10,
+        "available order quantity": 100,
+        "per unit price": 1500
+    },
+    {
+        "_id": 4,
+        "name": "Comperaser",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmRGF2Vhm3N4y_4XQ8V52rg2tGcJLx0AS8KQ&usqp=CAU",
+        "description": "It is compereser parts of refrigarator.It is one of the main part.",
+        "minimum order quantity": 10,
+        "available order quantity": 220,
+        "per unit price": 2500
+    },
+    {
+        "_id": 5,
+        "name": "Deforasting",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3aOWLFmnciMY6gVt7kaTsXzGv6p4OhwAvYg&usqp=CAU",
+        "description": "It is deforasting parts of refrigarator.It is very necessary for start refrigerator",
+        "minimum order quantity": 30,
+        "available order quantity": 300,
+        "per unit price": 170
+    },
+    {
+        "_id": 6,
+        "name": "Spire",
+        "image": "https://www.aruki-aspt.com/media/catalog/category/FanMotor.jpg",
+        "description": "It is deforasting parts of refrigarator.It is very necessary for start refrigerator",
+        "minimum order quantity": 10,
+        "available order quantity": 140,
+        "per unit price": 1600
+    }
+]
