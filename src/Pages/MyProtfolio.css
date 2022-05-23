@@ -1,0 +1,40 @@
+h1 {
+    font-size: xx-large;
+    color: deeppink;
+    font: bold
+}
+
+h1:hover {
+    color: firebrick;
+    transition-duration: 1s;
+}
+
+.background {
+    text-align: center;
+    font-size: large;
+    color: blue;
+    font: bold
+}
+
+.container-badsha {
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 5px solid;
+    border-radius: 10px;
+    margin-top: 15px;
+    background-color: bisque;
+    color: crimson;
+}
+
+.skill {
+    color: red;
+    font-size: xx-large;
+    font: bold;
+}
+
+.Link {
+    color: darkblue;
+    font-size: larger;
+    font: bold;
+}
