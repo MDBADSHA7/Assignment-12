@@ -1,7 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const Service = ({ service, setPurces }) => {
+const Service = ({ service }) => {
     const { name, image, description, minimumOrderQuantity, availableOrderQuantity, perUnitPrice } = service;
+    const navigate = useNavigate;
+    const navigatePurchase = event => {
+        navigate('/purchase')
+    }
     return (
         <div class="card w-96 bg-base-100 shadow-xl">
             <figure class="px-10 pt-10">
@@ -14,12 +19,10 @@ const Service = ({ service, setPurces }) => {
                 <h2 class="card-title">Available quantity : {availableOrderQuantity}</h2>
                 <h2 class="card-title">Per unit price: $ {perUnitPrice}</h2>
                 <div class="card-actions">
-                    <label for="purces-modal"
-                        onClick={() => setPurces(service)}
-                        class="btn btn-primary">Purces</label>
+                    <button onClick={navigatePurchase} class="btn btn-primary">Purchase</button>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 

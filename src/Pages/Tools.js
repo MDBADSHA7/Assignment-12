@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import PurcesModal from './Home/PurcesModal';
+// import PurcesModal from './Home/PurcesModal';
 import Service from './Service';
 
 const Tools = () => {
     const [services, setServices] = useState([]);
-    const [purces, setPurces] = useState(null);
+    // const [purces, setPurces] = useState(null);
     useEffect(() => {
         fetch('http://localhost:5000/service')
             .then(res => res.json())
@@ -18,11 +18,11 @@ const Tools = () => {
                     services.map(service => <Service
                         key={service._id}
                         service={service}
-                        setPurces={setPurces}
+                    // setPurces={setPurces}
                     ></Service>)
                 }
             </div>
-            {purces && <PurcesModal purces={purces}></PurcesModal>}
+            {/* {purces && <PurcesModal purces={purces}></PurcesModal>} */}
         </div>
     );
 };
