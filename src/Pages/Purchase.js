@@ -1,11 +1,10 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+
 
 const Purchase = () => {
-    const { id } = useParams();
     return (
         <div>
-            <h2>Purchase user:{id}</h2>
+            <h2>Purchase user</h2>
         </div>
     );
 };

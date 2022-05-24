@@ -1,8 +1,12 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+// import { useHistory } from "react-router-dom";
 
 const Service = ({ service }) => {
     const { name, image, description, minimumOrderQuantity, availableOrderQuantity, perUnitPrice } = service;
+
+    // const history = useHistory();
+    // const navigateTo = () => history.push('/purchase');
     const navigate = useNavigate;
     const navigatePurchase = event => {
         navigate('/purchase')
