@@ -1,0 +1,25 @@
+.Icon {
+    width: 30px;
+    height: 25px;
+}
+
+.footer {
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.flex {
+    justify-content: center;
+}
+
+.personalIcon {
+    justify-content: center;
+}
+
+.copyright {
+    justify-content: center;
+}

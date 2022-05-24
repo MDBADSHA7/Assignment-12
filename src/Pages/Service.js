@@ -8,7 +8,7 @@ const Service = ({ service }) => {
         navigate('/purchase')
     }
     return (
-        <div class="card w-96 bg-base-100 shadow-xl">
+        <div class="card w-96 bg-orange-400 shadow-xl">
             <figure class="px-10 pt-10">
                 <img src={image} alt="Shoes" class="rounded-xl" />
             </figure>
