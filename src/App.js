@@ -13,6 +13,8 @@ import RequireAuth from './Pages/RequireAuth';
 import Navbar from './Pages/Shared/Navbar';
 import NotFound from './Pages/Shared/NotFound';
 import SignUp from './Pages/SignUp';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function App() {
   return (
     <div className='px-8'>
@@ -39,6 +41,7 @@ function App() {
         </Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
+      <ToastContainer></ToastContainer>
     </div>
   );
 }

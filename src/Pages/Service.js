@@ -1,16 +1,6 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-// import { useHistory } from "react-router-dom";
-
-const Service = ({ service }) => {
+const Service = ({ service, setPurces }) => {
     const { name, image, description, minimumOrderQuantity, availableOrderQuantity, perUnitPrice } = service;
-
-    // const history = useHistory();
-    // const navigateTo = () => history.push('/purchase');
-    const navigate = useNavigate;
-    const navigatePurchase = event => {
-        navigate('/purchase')
-    }
     return (
         <div class="card w-96 bg-orange-400 shadow-xl">
             <figure class="px-10 pt-10">
@@ -23,7 +13,9 @@ const Service = ({ service }) => {
                 <h2 class="card-title">Available quantity : {availableOrderQuantity}</h2>
                 <h2 class="card-title">Per unit price: $ {perUnitPrice}</h2>
                 <div class="card-actions">
-                    <button onClick={navigatePurchase} class="btn btn-primary">Purchase</button>
+                    <label for="booking-modal"
+                        onClick={() => setPurces(service)}
+                        class="btn modal-button">Purchase</label>
                 </div>
             </div>
         </div >

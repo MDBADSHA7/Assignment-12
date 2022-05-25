@@ -8,7 +8,7 @@ import image6 from '../../Images/w-61.jpg';
 const OurWerehouseTools = () => {
     return (
         <div>
-            <h2 className='text-3xl text-blue-700 font-bold mb-5 text-center'>Our Business Summary</h2>
+            <h2 className='text-3xl text-blue-700 font-bold mb-5 text-center'>Our Manufacture Tools Werehouse</h2>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                 <div class="card w-96 bg-orange-300 shadow-xl">
                     <figure><img src={image1} alt="Shoes" /></figure>

@@ -5,7 +5,7 @@ import './BusinessSummary.css'
 const BusinessSummary = () => {
     return (
         <div >
-            <h2 className='text-3xl text-blue-700 font-bold mb-3 text-center mb-5'>Our Business Summary</h2>
+            <h2 className='text-3xl text-blue-700 font-bold mb-3 text-center'>Our Business Summary</h2>
             <div class=" justify-between card lg:card-side bg-red-100 shadow-xl mb-5">
                 <div class="card-body">
                     <h2 class="text-center text-2xl font-bold text-red-700">OUR SERVICE IS ONE THE BEST.TRY TO TRUST US.</h2>
