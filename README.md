@@ -6,7 +6,7 @@
 
 #Server site Github link by [https://github.com/programming-hero-web-course1/manufacturer-website-server-side-MDBADSHA7](https://github.com/programming-hero-web-course1/manufacturer-website-server-side-MDBADSHA7)
 
-## Live Site Link:[https://laptop-werehouse-website.web.app/](https://laptop-werehouse-website.web.app/)
+## Live Site Link:[https://manufacturer-website-ce0e5.web.app/](https://manufacturer-website-ce0e5.web.app/)
 
 * I use Tailwind and raw css.
 * I use react fontaswam Icon and Hero Icon.
