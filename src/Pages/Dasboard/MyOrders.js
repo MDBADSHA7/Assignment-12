@@ -32,23 +32,23 @@ const MyOrders = () => {
                 .then(data => setOrder(data))
         }
     }, [user])
-    const { email } = useParams;
-    const handleDelete = email => {
-        fetch(`https://afternoon-coast-43110.herokuapp.com/user/${email}}`, {
-            method: 'DELETE',
+    // const { email } = useParams;
+    // const handleDelete = email => {
+    //     fetch(`https://afternoon-coast-43110.herokuapp.com/user/${email}}`, {
+    //         method: 'DELETE',
 
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data)
-                if (data.deletedCount) {
-                    toast.success('product is deleted successfully')
-                }
-                else {
-                    toast.error('You can not delete product')
-                }
-            })
-    }
+    //     })
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             console.log(data)
+    //             if (data.deletedCount) {
+    //                 toast.success('product is deleted successfully')
+    //             }
+    //             else {
+    //                 toast.error('You can not delete product')
+    //             }
+    //         })
+    // }
     return (
         <div>
             <h2>My Order : {order.length}</h2>
@@ -75,7 +75,7 @@ const MyOrders = () => {
                                         className="btn btn-secondary"
                                     ></button></Link>}</td> */}
                                     <td><button
-                                        onClick={() => handleDelete(email)}
+                                        // onClick={() => handleDelete(email)}
                                         class="btn btn-secondary">Delete</button></td>
                                 </tr>)
                         }

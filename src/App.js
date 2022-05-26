@@ -7,6 +7,7 @@ import MyOrders from './Pages/Dasboard/MyOrders';
 import MyProfile from './Pages/Dasboard/MyProfile';
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login';
+import MyProtofolio from './Pages/MyProtfolio';
 import Purchase from './Pages/Purchase';
 import RequireAuth from './Pages/RequireAuth';
 import Navbar from './Pages/Shared/Navbar';
@@ -31,9 +32,7 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
         <Route path='/myprotfolio' element={
-          <RequireAuth>
-            <Purchase></Purchase>
-          </RequireAuth>
+          <MyProtofolio></MyProtofolio>
         }></Route>
         <Route path="/dasboard" element={
           <RequireAuth>

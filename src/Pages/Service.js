@@ -20,6 +20,5 @@ const Service = ({ service, setPurces }) => {
             </div>
         </div >
     );
-};
-
+}
 export default Service;
