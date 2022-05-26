@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import ProfileRow from './ProfileRow';
 // import { useQuery } from 'react-query';
 // import Loading from '../Shared/Loading';
 const MyProfile = () => {
