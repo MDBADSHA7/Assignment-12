@@ -38,12 +38,23 @@ const MyProfile = () => {
                     </thead>
                     <tbody>
                         {
+                            users.map(user => <tr
+                                key={user._id}
+                                user={user}
+                            >
+                                <th></th>
+                                <th>Name</th>
+                                <th>Make a user Admin</th>
+                                <th>Remove User</th>
+                            </tr>)
+                        }
+                        {/* {
                             users.map(user => <ProfileRow
                                 key={user._id}
                                 user={user}
                                 refetch={refetch}
                             ></ProfileRow>)
-                        }
+                        } */}
                     </tbody>
                 </table>
             </div>

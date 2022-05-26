@@ -1,8 +1,9 @@
 import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link, useParams } from 'react-router-dom';
 import auth from '../../firebase.init';
+import { toast } from 'react-toastify';
 
 const MyOrders = () => {
     const [order, setOrder] = useState([]);
@@ -31,6 +32,23 @@ const MyOrders = () => {
                 .then(data => setOrder(data))
         }
     }, [user])
+    const { email } = useParams;
+    const handleDelete = email => {
+        fetch(`https://afternoon-coast-43110.herokuapp.com/user/${email}}`, {
+            method: 'DELETE',
+
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.deletedCount) {
+                    toast.success('product is deleted successfully')
+                }
+                else {
+                    toast.error('You can not delete product')
+                }
+            })
+    }
     return (
         <div>
             <h2>My Order : {order.length}</h2>
@@ -39,10 +57,10 @@ const MyOrders = () => {
                     <thead>
                         <tr>
                             <th></th>
-                            <th>Name</th>
-                            <th>Email</th>
+                            <th>Customer Name</th>
+                            <th>Payment</th>
                             <th>Tools</th>
-                            <th>Price</th>
+                            <th>Delate Order</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -51,9 +69,14 @@ const MyOrders = () => {
                                 <tr>
                                     <th>{index + 1}</th>
                                     <td>{a.customerName}</td>
-                                    <td>{a.customerEmail}</td>
+                                    <td>{(a.price && !a.pay) && <Link to={`/dasboard/payment/${a._id}`}><button class="btn btn-secondary">Pay Now</button></Link>}</td>
                                     <td>{a.purcesName}</td>
-                                    <td>{a.price}</td>
+                                    {/* <td>{a.purcesName && <Link to={``}><button
+                                        className="btn btn-secondary"
+                                    ></button></Link>}</td> */}
+                                    <td><button
+                                        onClick={() => handleDelete(email)}
+                                        class="btn btn-secondary">Delete</button></td>
                                 </tr>)
                         }
                     </tbody>
