@@ -1,19 +1,33 @@
+import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 
 const MyOrders = () => {
     const [order, setOrder] = useState([]);
     const [user] = useAuthState(auth);
+    const navigate = useNavigate();
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/booking?customerName=${user.email}`, {
+            fetch(`https://afternoon-coast-43110.herokuapp.com/booking?customerName=${user.email}`, {
                 method: 'GET',
                 headers: {
-                    'authorization': `Bearer ${localStorage.getItem('token')}`
+                    'authorization': `Bearer ${localStorage.getItem('AccessToken')}`
                 }
             })
-                .then(res => res.json())
+                .then(res => {
+                    console.log(res)
+                    if (res.status === 401) {
+                        signOut(auth)
+                        localStorage.setItem('AccessToken');
+                        navigate('/')
+                    }
+                    else if (res.status === 403) {
+                        navigate('/')
+                    }
+                    return res.json()
+                })
                 .then(data => setOrder(data))
         }
     }, [user])

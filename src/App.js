@@ -15,6 +15,11 @@ import NotFound from './Pages/Shared/NotFound';
 import SignUp from './Pages/SignUp';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import MakeAdmin from './Pages/Dasboard/MakeAdmin';
+import AddProducts from './Pages/Dasboard/AddProducts';
+import ManageAllProducts from './Pages/Dasboard/ManageAllProducts';
+import ManageProducts from './Pages/Dasboard/ManageProducts';
+import RequireAdmin from './Pages/RequireAdmin';
 function App() {
   return (
     <div className='px-8'>
@@ -38,6 +43,26 @@ function App() {
           <Route index element={<MyProfile></MyProfile>}></Route>
           <Route path='review' element={<AddCustomerReview></AddCustomerReview>}></Route>
           <Route path='myorder' element={<MyOrders></MyOrders>}></Route>
+          <Route path='makeadmin' element={
+            <RequireAdmin>
+              <MakeAdmin></MakeAdmin>
+            </RequireAdmin>
+          }></Route>
+          <Route path='addproducts' element={
+            <RequireAdmin>
+              <AddProducts></AddProducts>
+            </RequireAdmin>
+          }></Route>
+          <Route path='manageallproducts' element={
+            <RequireAdmin>
+              <ManageAllProducts></ManageAllProducts>
+            </RequireAdmin>
+          }></Route>
+          <Route path='manageproducts' element={
+            <RequireAdmin>
+              <ManageProducts></ManageProducts>
+            </RequireAdmin>
+          }></Route>
         </Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>

@@ -22,11 +22,11 @@ const Login = () => {
     const location = useLocation();
     let from = location.state?.from?.pathname || "/";
 
-    // useEffect(() => {
-    //     if (token) {
-    //         navigate(from, { replace: true });
-    //     }
-    // }, [from, token, navigate])
+    useEffect(() => {
+        if (token) {
+            navigate(from, { replace: true });
+        }
+    }, [from, token, navigate])
 
     if (loading || gLoading) {
         return <Loading></Loading>
@@ -34,10 +34,10 @@ const Login = () => {
     if (error || gError) {
         signInError = <p className='text-red-500'>{error?.message || gError?.message}</p>
     }
-    if (token) {
-        navigate(from, { replace: true });
-        console.log(user || gUser)
-    }
+    // if (token) {
+    //     navigate(from, { replace: true });
+    //     console.log(user || gUser)
+    // }
     const onSubmit = data => {
         console.log(data);
         signInWithEmailAndPassword(data.email, data.password);

@@ -20,7 +20,7 @@ const PurcesModal = ({ purces, setPurces }) => {
             price: perUnitPrice,
             phone: event.target.phone.value,
         }
-        fetch('http://localhost:5000/booking', {
+        fetch('https://afternoon-coast-43110.herokuapp.com/booking', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
